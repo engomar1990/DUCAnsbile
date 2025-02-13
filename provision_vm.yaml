@@ -2,7 +2,6 @@
   hosts: localhost
   gather_facts: no
   tasks:
-
     - name: Deploy VM from template
       community.vmware.vmware_guest:
         hostname: "{{ vcenter_hostname }}"
