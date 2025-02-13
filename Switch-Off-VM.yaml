@@ -1,0 +1,12 @@
+- name: Power off a VM on vCenter
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Power off VM
+      community.vmware.vmware_guest_powerstate:
+        hostname: "172.23.25.17"
+        username: "AnsibleUser@ducmngservices.com"
+        password: "A@ek)vd@5s$dsa"
+        validate_certs: no
+        name: "New-VM"  # Replace with your VM name
+        state: powered-off
